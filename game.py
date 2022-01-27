@@ -6,9 +6,29 @@
 from random import choice
 import os
 
-def determine_winner(choice1, choice2):
-    # todo: write some Python here to determine the winner
-    return "TODO"
+def determine_winner(user_move, computer_move):
+    if computer_move == 'rock':
+        if user_move == "rock":
+            result = None
+        elif user_move == 'paper':
+            result = 'paper'
+        elif user_move == 'scissors':
+            result = 'rock'
+    elif computer_move == 'paper':
+        if user_move == "rock":
+            result = "paper"
+        elif user_move == 'paper':
+            result = None
+        elif user_move == 'scissors':
+            result = 'scissors'
+    elif computer_move == 'scissors':
+        if user_move == "rock":
+            result = 'rock'
+        elif user_move == 'paper':
+            result = "scissors"
+        elif user_move == 'scissors':
+            result = None
+    return result
 
 if __name__ == "__main__":
     # Print Welcome Message

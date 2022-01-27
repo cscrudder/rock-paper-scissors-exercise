@@ -39,9 +39,8 @@ python game.py
 ```
 
 ## Testing
-#will set this up later
 
-Run tests:
+To run tests using Pytest:
 
 ```sh
 pytest
