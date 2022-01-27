@@ -25,6 +25,14 @@ pip install -r requirements.txt
 ## Usage
 
 Run the rock paper scissors game:
+The user can enter his or her username. "Jon Snow" is the example where the user would type. Remember to include quotes around the username.
+
+
+```sh
+PLAYER_NAME="Jon Snow" python game.py
+```
+
+Or, the user can use the default username:
 
 ```sh
 python game.py

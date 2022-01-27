@@ -4,10 +4,12 @@
 #https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 
 from random import choice
+import os
 
 # Print Welcome Message
+player_name = os.getenv("PLAYER_NAME", default = "Player One")
 print("------------")
-print("Welcome 'Player 1' to my Rock-Paper-Scissors game...")
+print("Welcome", player_name, "to my Rock-Paper-Scissors game...")
 print("------------")
 
 # Processing User Inputs
