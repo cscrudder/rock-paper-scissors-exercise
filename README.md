@@ -7,13 +7,13 @@ A Starter Repository for the [Rock Paper Scissors Exercise](https://github.com/p
 Create a virtual environment:
 
 ```sh
-conda create -n rps-env python=3.8
+conda create -n RPS-game python=3.8
 ```
 
 Activate the virtual environment:
 
 ```sh
-conda activate rps-env
+conda activate RPS-game
 ```
 
 Install package dependencies (mainly for testing):
@@ -31,6 +31,7 @@ python game.py
 ```
 
 ## Testing
+#will set this up later
 
 Run tests:
 
