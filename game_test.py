@@ -8,7 +8,6 @@
 
 from game import determine_winner
 
-
 def test_determination_of_the_winner():
 
     assert determine_winner("rock", "rock") == None
