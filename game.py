@@ -3,9 +3,11 @@
 # Objectives:
 #https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 
+# import modules needed
 from random import choice
 import os
 
+#function to determine winner that also works with pytest
 def determine_winner(user_move, computer_move):
     if computer_move == 'rock':
         if user_move == "rock":
@@ -30,6 +32,7 @@ def determine_winner(user_move, computer_move):
             result = None
     return result
 
+#if statement needed ensure user is running the correct file
 if __name__ == "__main__":
     # Print Welcome Message
     player_name = os.getenv("PLAYER_NAME", default = "Player One")
@@ -55,28 +58,16 @@ if __name__ == "__main__":
     options = ['rock','paper','scissors']
     computer_move = choice(options)
 
-    # Determining the Winner
-    if computer_move == 'rock':
-        if user_move == "rock":
-            result = 'tie'
-        elif user_move == 'paper':
-            result = 'win'
-        elif user_move == 'scissors':
-            result = "loss"
-    elif computer_move == 'paper':
-        if user_move == "rock":
-            result = "loss"
-        elif user_move == 'paper':
-            result = 'tie'
-        elif user_move == 'scissors':
-            result = 'win'
-    elif computer_move == 'scissors':
-        if user_move == "rock":
-            result = 'win'
-        elif user_move == 'paper':
-            result = "loss"
-        elif user_move == 'scissors':
-            result = 'tie'
+    # Determining the winning move by using custom function
+    winning_move = determine_winner(user_move, computer_move)
+
+    #determines if the user won, lost, or tied based on the winning move
+    if winning_move == user_move:
+        result = 'win'
+    elif winning_move == computer_move:
+        result = 'loss'
+    else: 
+        result = "tie"
 
     #Displaying Results
     print("You chose:", user_move)
@@ -89,5 +80,5 @@ if __name__ == "__main__":
     else:
         print("You tied. You're just as good as a computer!")
     print("------------")
-    print("Thanks for playing. Please play again.")
+    print("Thanks for playing. Please play again.\n")
 

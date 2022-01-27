@@ -1,11 +1,12 @@
+# This file allows pytest to run a test to make sure the "game.py" file works correctly.
+
+# https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/challenges.md
 
 
-# FYI: this is to satisfy the OPTIONAL testing challenge objectives
-# ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/challenges.md
-#
-
+# import determine_winner custom function from "game.py"
 from game import determine_winner
 
+# new function that uses syntax from pytest to test if "game.py" is working correctly
 def test_determination_of_the_winner():
 
     assert determine_winner("rock", "rock") == None
